@@ -1,0 +1,20 @@
+"apple": "this is an apple"
+1: "this is a very good boy"
+---
+#lists
+-hello
+-world
+-yaml
+-json
+-xml
+---
+cities:
+ -new delhi
+ -mumbai
+ -ahemdabad
+---
+cities: [new delhi, mumbai, ahemadabad]
+---
+
+{name: "aditya pandey",age: 20}
+...

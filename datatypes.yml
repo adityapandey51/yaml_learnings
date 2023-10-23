@@ -1,0 +1,52 @@
+#strings
+
+name: aditya pandey
+nae: "aditya pandey"
+nam: 'adity pandey'
+#all 3 are same
+
+para: |
+ hi iam aditya pandey 
+ from earth
+
+ #will treat the 2 lines as 1 line
+par: >
+ this is aditya pandey
+ from earth
+---
+number: 56
+float: 56.56
+negetiveNo: -45
+booleanVal: No
+booleanYes: Yes
+---
+
+#with datatype
+#int
+number: !!int 56
+binary: !!int 0b1101
+ocatal: !!int 01237
+hex: !!int 0x4368a
+withComma: !!int +900_000
+---
+#float
+float: !!float 56.56
+infinity: !!float .inf
+not a number: .nan
+---
+#bool
+boolean: !!bool Yes
+---
+#str
+string: !!str hello world
+---
+#null
+doesnt have value: !!null Null #null Null ~
+~: this is a null key
+---
+#exponential numbers
+expno: 6.023E23
+---
+#timestamp
+date and time: !!timestamp 2004-08-03T02:36:24:43 +5:30
+

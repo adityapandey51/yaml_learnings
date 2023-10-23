@@ -1,0 +1,82 @@
+person: !!seq
+ -firstName
+ -lastName
+ -dob
+ -place
+---
+#sparse seq
+#some of the keys of the seq are empty
+sparse seq: 
+ -hello
+ -world
+ -
+ -Null
+ -
+ -hey
+---
+#nested seq
+-
+ -hello
+ -world
+-
+ -how
+ -firstName
+ -json
+---
+#key value pairs are called maps
+# !!map
+
+# nested mapping
+name: aditya
+lastname: pandey
+role:
+  age: 20
+  college: NIT
+
+#same result as above
+name: aditya
+lastname: pandey
+role: {age: 20,college: NIT}
+
+#pairs-keys may have duplicate values
+# !!pairs
+pairs example: !!pairs
+ -passion: coding
+ -passion: code
+#this will be an array of hashtables
+---
+#set: will have unique values
+set example: !!set 
+ ?aditya
+ ?pandey
+ ?hello
+
+---
+#dictionary: !!omap
+dictionary ex: !!omap
+ -aditya: 
+   name: aditya pandey
+   age: 20
+   home: hyd
+ -pandey:
+   name: adi
+   age: 20
+   home: gkp
+---
+#reusing the properties using anchors
+likings: &likes
+ fav fruit: banana
+ dislikes: avacado
+
+person1:
+ name: aditya
+ <<: *likes
+
+person2:
+ name: pandey
+ <<: *likes
+ dislikes: berries
+#this will overwrite dislikes from likings
+
+
+  
